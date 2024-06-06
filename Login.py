@@ -167,7 +167,7 @@ def main():
 
     elif st.session_state.page == 'homepage':
         # Execute the code from homepage.py
-        with open("homepage.py") as f:
+        with open("Homepage.py") as f:
             code = compile(f.read(), "homepage.py", 'exec')
             exec(code, globals())
 
