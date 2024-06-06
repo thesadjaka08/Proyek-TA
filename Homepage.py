@@ -67,7 +67,7 @@ def homepage():
     with col2:
         
         st.markdown('<div style="text-align:justify; margin-bottom:10px; margin-top:5px; margin-left:10px;">Chatbot yang dapat merespons pertanyaan-pertanyaan mengenai proses pengajuan pinjaman.</div>', unsafe_allow_html=True)
-        st.page_link("https://streamlit.io/gallery", label="Chatbot")
+        st.page_link("https://chatloanbot.000webhostapp.com/", label="Chatbot")
 
         st.markdown('<div style="text-align:justify; margin-bottom:10px; margin-top:18px; margin-left:10px;">Prediksi Kelayakan Pinjaman menampilkan hasil prediksi apakah pemohon layak mendapatkan pinjaman atau tidak.</div>', unsafe_allow_html=True)
         st.page_link("pages/pinjaman.py", label="Prediksi Kelayakan Pinjaman")
