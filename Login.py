@@ -113,9 +113,9 @@ def update_verification_status(email):
 def main():
     create_table()
     add_verified_column()
+    st.title("Login and Registration")
 
     if 'page' not in st.session_state:
-        st.title("Login and Registration")
         st.session_state.page = 'login'
 
     if st.session_state.page == 'login':
@@ -166,6 +166,7 @@ def main():
                     st.error("Incorrect verification code")
 
     elif st.session_state.page == 'homepage':
+        st.title("")  
         # Execute the code from homepage.py
         with open("Homepage.py") as f:
             code = compile(f.read(), "homepage.py", 'exec')
