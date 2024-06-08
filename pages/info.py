@@ -1,9 +1,10 @@
 import streamlit as st
 
+st.sidebar.image('images/logo.png')
 st.markdown("<style> ul {display: none;} </style>", unsafe_allow_html=True)
 
 # sidebars
-st.sidebar.image('images/logo.png')
+
 st.sidebar.header("Menu")
 st.sidebar.page_link("pages/Homepage.py", label="Beranda")
 st.sidebar.page_link("pages/pinjaman.py", label="Prediksi Kelayakan Pinjaman")
