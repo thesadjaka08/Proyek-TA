@@ -4,6 +4,7 @@ import streamlit as st
 def homepage():
     st.title("")
     st.markdown("<style> ul {display: none;} </style>", unsafe_allow_html=True)  
+    st.sidebar.image('images/logo.png')
 
     # Set the title of the homepage
     st.markdown('<div style="text-align:center; font-size:46px; font-weight:bold; margin-bottom:25px;">Selamat Datang di Sistem Prediksi Pinjaman Pribadi Kami!</div>', unsafe_allow_html=True)
