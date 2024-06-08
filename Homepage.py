@@ -2,6 +2,9 @@
 import streamlit as st
 
 def homepage():
+    st.title("")
+    st.markdown("<style> ul {display: none;} </style>", unsafe_allow_html=True)  
+
     # Set the title of the homepage
     st.markdown('<div style="text-align:center; font-size:46px; font-weight:bold; margin-bottom:25px;">Selamat Datang di Sistem Prediksi Pinjaman Pribadi Kami!</div>', unsafe_allow_html=True)
 
@@ -9,6 +12,14 @@ def homepage():
     st.sidebar.header("Menu")
     st.sidebar.page_link("https://chatloanbot.000webhostapp.com/", label="Chatbot")
     st.sidebar.page_link("pages/pinjaman.py", label="Prediksi Kelayakan Pinjaman")
+    st.sidebar.page_link("pages/info.py", label="Info")
+    st.sidebar.markdown("""
+    <a href="Login.py" target="_self">
+        <button style="background-color:#f63366;color:white;border:none;padding:10px 20px;border-radius:5px; margin-top:50px;">
+            Logout
+        </button>
+    </a>
+    """, unsafe_allow_html=True)
 
 
     # Create columns
@@ -65,12 +76,22 @@ def homepage():
         # st.image('<div style= margin-bottom:25px;">images/technology.png</div>', use_column_width=True)
 
     with col2:
-        
-        st.markdown('<div style="text-align:justify; margin-bottom:10px; margin-top:5px; margin-left:10px;">Chatbot yang dapat merespons pertanyaan-pertanyaan mengenai proses pengajuan pinjaman.</div>', unsafe_allow_html=True)
-        st.page_link("https://chatloanbot.000webhostapp.com/", label="Chatbot")
+        st.markdown('''
+        <div style="display: flex; align-items: center; margin-bottom: 10px; margin-top: 5px; margin-left: 10px;">
+            <span style="font-size: 25px; margin-right: 10px;">🤖</span>
+            <div>Chatbot yang dapat merespons pertanyaan-pertanyaan mengenai proses pengajuan pinjaman</div>
+        </div>
+        ''', unsafe_allow_html=True)
+        st.link_button("Chatbot", "https://chatloanbot.000webhostapp.com/")
 
-        st.markdown('<div style="text-align:justify; margin-bottom:10px; margin-top:18px; margin-left:10px;">Prediksi Kelayakan Pinjaman menampilkan hasil prediksi apakah pemohon layak mendapatkan pinjaman atau tidak.</div>', unsafe_allow_html=True)
-        st.page_link("pages/pinjaman.py", label="Prediksi Kelayakan Pinjaman")
+        st.markdown('''
+        <div style="display: flex; align-items: center; margin-bottom: 10px; margin-top: 5px; margin-left: 10px;">
+            <span style="font-size: 25px; margin-right: 10px;">📈</span>
+            <div>Prediksi Kelayakan Pinjaman menampilkan hasil prediksi apakah pemohon layak mendapatkan pinjaman atau tidak</div>
+        </div>
+        ''', unsafe_allow_html=True)
+        if st.button("Prediksi Kelayakan Pinjaman"):
+            st.switch_page("pages/pinjaman.py")
 
 
 if __name__ == "__main__":
