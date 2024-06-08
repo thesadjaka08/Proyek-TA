@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 from xgboost import XGBClassifier
 
-
+st.sidebar.image('images/logo.png')
 no_sidebar_style = """
     <style>
         div[data-testid="stSidebarNav"] {display: none;}
