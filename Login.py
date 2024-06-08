@@ -15,6 +15,8 @@ no_sidebar_style = """
 """
 st.markdown(no_sidebar_style, unsafe_allow_html=True)
 
+st.sidebar.image('images/logo.png')
+
 # Function to create or connect to the database
 def create_connection():
     try:
