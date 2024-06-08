@@ -15,7 +15,7 @@ no_sidebar_style = """
 """
 st.markdown(no_sidebar_style, unsafe_allow_html=True)
 
-st.sidebar.image('images/logo.png')
+
 
 # Function to create or connect to the database
 def create_connection():
@@ -129,6 +129,7 @@ def main():
 
     if st.session_state.page == 'login':
         st.title("Login and Registration")
+        st.sidebar.image('images/logo.png')
         tabs = st.tabs(["Login", "Register"])
         
         with tabs[0]:
