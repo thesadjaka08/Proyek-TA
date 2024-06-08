@@ -7,6 +7,8 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import hashlib
 
+st.markdown("<style> ul {display: none;} </style>", unsafe_allow_html=True)
+
 # Function to create or connect to the database
 def create_connection():
     try:
@@ -113,18 +115,19 @@ def update_verification_status(email):
 def main():
     create_table()
     add_verified_column()
-    st.title("Login and Registration")
 
     if 'page' not in st.session_state:
         st.session_state.page = 'login'
 
     if st.session_state.page == 'login':
+        st.title("Login and Registration")
         tabs = st.tabs(["Login", "Register"])
+        
         with tabs[0]:
             st.subheader("Login")
-            username = st.text_input("Username")
-            password = st.text_input("Password", type="password")
-            if st.button("Login"):
+            username = st.text_input("Username", key="login_username")
+            password = st.text_input("Password", type="password", key="login_password")
+            if st.button("Login", key="login_button"):
                 user = authenticate(username, password)
                 if user:
                     email, verified = user[2], user[3]
@@ -139,10 +142,10 @@ def main():
 
         with tabs[1]:
             st.subheader("Register")
-            new_username = st.text_input("New Username")
-            new_password = st.text_input("New Password", type="password")
-            email = st.text_input("Email")
-            if st.button("Register"):
+            new_username = st.text_input("New Username", key="register_new_username")
+            new_password = st.text_input("New Password", type="password", key="register_new_password")
+            email = st.text_input("Email", key="register_email")
+            if st.button("Register", key="register_button"):
                 if email_exists(email):
                     st.error("This email is already registered")
                 else:
@@ -150,10 +153,11 @@ def main():
                     st.session_state.new_username = new_username
                     st.session_state.new_password = new_password
                     st.session_state.email = email
+                    st.session_state.verification_code = '1234'  # Simulating sending a code
 
         if "verification_code" in st.session_state:
-            input_code = st.text_input("Enter verification code sent to your email")
-            if st.button("Verify"):
+            input_code = st.text_input("Enter verification code sent to your email", key="verification_code")
+            if st.button("Verify", key="verify_button"):
                 if input_code == st.session_state.verification_code:
                     insert_user(st.session_state.new_username, st.session_state.new_password, 
                                 st.session_state.email, 1)
@@ -166,10 +170,9 @@ def main():
                     st.error("Incorrect verification code")
 
     elif st.session_state.page == 'homepage':
-        st.title("")  
         # Execute the code from homepage.py
-        with open("Homepage.py") as f:
-            code = compile(f.read(), "homepage.py", 'exec')
+        with open("pages/Homepage.py") as f:
+            code = compile(f.read(), "pages/Homepage.py", 'exec')
             exec(code, globals())
 
 if __name__ == "__main__":
