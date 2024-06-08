@@ -7,7 +7,13 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import hashlib
 
-st.markdown("<style> ul {display: none;} </style>", unsafe_allow_html=True)
+# st.markdown("<style> ul {display: none;} </style>", unsafe_allow_html=True)
+no_sidebar_style = """
+    <style>
+        div[data-testid="stSidebarNav"] {display: none;}
+    </style>
+"""
+st.markdown(no_sidebar_style, unsafe_allow_html=True)
 
 # Function to create or connect to the database
 def create_connection():
