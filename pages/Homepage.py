@@ -99,10 +99,10 @@ def homepage():
             <div>Prediksi Kelayakan Pinjaman menampilkan hasil prediksi apakah pemohon layak mendapatkan pinjaman atau tidak</div>
         </div>
         ''', unsafe_allow_html=True)
-        # if st.button("Prediksi Kelayakan Pinjaman"):
-        #     st.switch_page("pages/pinjaman.py")
         if st.button("Prediksi Kelayakan Pinjaman"):
-            st.switch_page("pinjaman.py")
+            st.switch_page("pages/pinjaman.py")
+        # if st.button("Prediksi Kelayakan Pinjaman"):
+        #     st.switch_page("pinjaman.py")
 
 
 if __name__ == "__main__":
