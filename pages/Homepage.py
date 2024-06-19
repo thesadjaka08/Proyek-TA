@@ -103,6 +103,9 @@ def homepage():
         </a>
         """, unsafe_allow_html=True)
 
+        if st.button('Prediksi Kelayakan Pinjaman'):
+            exec(open('pages/pinjaman.py').read())
+
 
 
 if __name__ == "__main__":
