@@ -94,7 +94,14 @@ def homepage():
         ''', unsafe_allow_html=True)
         # if st.button("Prediksi Kelayakan Pinjaman"):
         #     st.switch_page("pages/pinjaman.py")
-        st.sidebar.markdown('[Prediksi Kelayakan Pinjaman](pages/pinjaman.py)', unsafe_allow_html=True)
+        
+        st.markdown("""
+        <a href="Login.py" target="_self">
+            <button style="background-color:#f63366;color:white;border:none;padding:10px 20px;border-radius:5px; margin-top:50px;">
+                Logout
+            </button>
+        </a>
+        """, unsafe_allow_html=True)
 
 
 
