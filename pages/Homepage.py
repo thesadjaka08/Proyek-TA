@@ -84,7 +84,7 @@ def homepage():
             <div>Chatbot yang dapat merespons pertanyaan-pertanyaan mengenai proses pengajuan pinjaman</div>
         </div>
         ''', unsafe_allow_html=True)
-        st.link_button("Chatbot", "https://chatloanbot.000webhostapp.com/")
+        st.button("Chatbot", "https://chatloanbot.000webhostapp.com/")
 
         st.markdown('''
         <div style="display: flex; align-items: center; margin-bottom: 10px; margin-top: 5px; margin-left: 10px;">
