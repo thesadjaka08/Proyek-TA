@@ -7,14 +7,12 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import hashlib
 
-# st.markdown("<style> ul {display: none;} </style>", unsafe_allow_html=True)
 no_sidebar_style = """
     <style>
         div[data-testid="stSidebarNav"] {display: none;}
     </style>
 """
 st.markdown(no_sidebar_style, unsafe_allow_html=True)
-
 
 
 # Function to create or connect to the database
@@ -130,6 +128,7 @@ def main():
     if st.session_state.page == 'login':
         st.title("Login and Registration")
         st.sidebar.image('images/logo.png')
+        
         tabs = st.tabs(["Login", "Register"])
         
         with tabs[0]:
