@@ -12,15 +12,9 @@ def homepage():
 
     # sidebars
     st.sidebar.header("Menu")
-    # st.sidebar.page_link("https://chatloanbot.000webhostapp.com/", label="Chatbot")
-    st.sidebar.write("[Chatbot](https://chatloanbot.000webhostapp.com/)")
-    if st.sidebar.button("Prediksi Kelayakan Pinjaman"):
-        st.switch_page("pages/pinjaman.py")
-    if st.sidebar.button("Info"):
-        st.switch_page("pages/info.py")
-    
-    # st.sidebar.page_link("pages/pinjaman.py", label="Prediksi Kelayakan Pinjaman")
-    # st.sidebar.page_link("pages/info.py", label="Info")
+    st.sidebar.page_link("https://chatloanbot.000webhostapp.com/", label="Chatbot")
+    st.sidebar.page_link("pages/pinjaman.py", label="Prediksi Kelayakan Pinjaman")
+    st.sidebar.page_link("pages/info.py", label="Info")
     st.sidebar.markdown("""
     <a href="Login.py" target="_self">
         <button style="background-color:#f63366;color:white;border:none;padding:10px 20px;border-radius:5px; margin-top:50px;">
@@ -90,8 +84,7 @@ def homepage():
             <div>Chatbot yang dapat merespons pertanyaan-pertanyaan mengenai proses pengajuan pinjaman</div>
         </div>
         ''', unsafe_allow_html=True)
-        # st.link_button("Chatbot", "https://chatloanbot.000webhostapp.com/")
-        st.write("[Chatbot](https://chatloanbot.000webhostapp.com/)")
+        st.link_button("Chatbot", "https://chatloanbot.000webhostapp.com/")
 
         st.markdown('''
         <div style="display: flex; align-items: center; margin-bottom: 10px; margin-top: 5px; margin-left: 10px;">
@@ -99,13 +92,10 @@ def homepage():
             <div>Prediksi Kelayakan Pinjaman menampilkan hasil prediksi apakah pemohon layak mendapatkan pinjaman atau tidak</div>
         </div>
         ''', unsafe_allow_html=True)
-
-        # st.page_link("pinjaman.py", label="Home", icon="🏠")
         
-        # if st.button("Prediksi Kelayakan Pinjaman"):
-        #     st.switch_page("pages/pinjaman.py")
-        if st.button("Prediksi Kelayakan Pinjaman", key="main_prediksi_button"):
-            st.switch_page("pinjaman.py")
+        if st.button("Prediksi Kelayakan Pinjaman"):
+            st.switch_page("pages/pinjaman.py")
+
     
 
 if __name__ == "__main__":
