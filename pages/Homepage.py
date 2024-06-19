@@ -104,7 +104,7 @@ def homepage():
         
         # if st.button("Prediksi Kelayakan Pinjaman"):
         #     st.switch_page("pages/pinjaman.py")
-        if st.button("Prediksi Kelayakan Pinjaman"):
+        if st.button("Prediksi Kelayakan Pinjaman", key="main_prediksi_button"):
             st.switch_page("pinjaman.py")
     
 
