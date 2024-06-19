@@ -4,9 +4,17 @@ st.markdown("<style> ul {display: none;} </style>", unsafe_allow_html=True)
 
 # sidebars
 st.sidebar.header("Menu")
-st.sidebar.page_link("pages/Homepage.py", label="Beranda")
-st.sidebar.page_link("pages/pinjaman.py", label="Prediksi Kelayakan Pinjaman")
-st.sidebar.page_link("https://chatloanbot.000webhostapp.com/", label="Chatbot")
+
+if st.sidebar.button("Beranda"):
+    st.switch_page("Homepage.py")
+st.sidebar.write("[Chatbot](https://chatloanbot.000webhostapp.com/)")
+if st.sidebar.button("Prediksi Kelayakan Pinjaman"):
+    st.switch_page("pinjaman.py")
+
+# st.sidebar.page_link("pages/Homepage.py", label="Beranda")
+# st.sidebar.page_link("pages/pinjaman.py", label="Prediksi Kelayakan Pinjaman")
+# st.sidebar.page_link("https://chatloanbot.000webhostapp.com/", label="Chatbot")
+
 st.sidebar.markdown("""
 <a href="Login.py" target="_self">
     <button style="background-color:#f63366;color:white;border:none;padding:10px 20px;border-radius:5px; margin-top:50px;">
