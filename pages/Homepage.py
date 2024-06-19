@@ -100,7 +100,7 @@ def homepage():
         </div>
         ''', unsafe_allow_html=True)
 
-        st.page_link("pinjaman.py", label="Home", icon="🏠")
+        # st.page_link("pinjaman.py", label="Home", icon="🏠")
         
         # if st.button("Prediksi Kelayakan Pinjaman"):
         #     st.switch_page("pages/pinjaman.py")
