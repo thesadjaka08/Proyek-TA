@@ -101,7 +101,7 @@ def homepage():
         ''', unsafe_allow_html=True)
         # if st.button("Prediksi Kelayakan Pinjaman"):
         #     st.switch_page("pages/pinjaman.py")
-        if st.sidebar.button("Prediksi Kelayakan Pinjaman"):
+        if st.button("Prediksi Kelayakan Pinjaman"):
             st.switch_page("pinjaman.py")
 
 
