@@ -14,8 +14,10 @@ def homepage():
     st.sidebar.header("Menu")
     # st.sidebar.page_link("https://chatloanbot.000webhostapp.com/", label="Chatbot")
     st.sidebar.write("[Chatbot](https://chatloanbot.000webhostapp.com/)")
-    if st.sidebar.button("Home"):
+    if st.sidebar.button("Prediksi Kelayakan Pinjaman"):
         st.switch_page("pinjaman.py")
+    if st.sidebar.button("Info"):
+        st.switch_page("info.py")
     
     # st.sidebar.page_link("pages/pinjaman.py", label="Prediksi Kelayakan Pinjaman")
     # st.sidebar.page_link("pages/info.py", label="Info")
