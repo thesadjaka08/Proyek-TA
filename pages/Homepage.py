@@ -90,7 +90,8 @@ def homepage():
             <div>Chatbot yang dapat merespons pertanyaan-pertanyaan mengenai proses pengajuan pinjaman</div>
         </div>
         ''', unsafe_allow_html=True)
-        st.link_button("Chatbot", "https://chatloanbot.000webhostapp.com/")
+        # st.link_button("Chatbot", "https://chatloanbot.000webhostapp.com/")
+        st.sidebar.write("[Chatbot](https://chatloanbot.000webhostapp.com/)")
 
         st.markdown('''
         <div style="display: flex; align-items: center; margin-bottom: 10px; margin-top: 5px; margin-left: 10px;">
@@ -98,9 +99,10 @@ def homepage():
             <div>Prediksi Kelayakan Pinjaman menampilkan hasil prediksi apakah pemohon layak mendapatkan pinjaman atau tidak</div>
         </div>
         ''', unsafe_allow_html=True)
-        if st.button("Prediksi Kelayakan Pinjaman"):
-            st.switch_page("pages/pinjaman.py")
-
+        # if st.button("Prediksi Kelayakan Pinjaman"):
+        #     st.switch_page("pages/pinjaman.py")
+        if st.sidebar.button("Prediksi Kelayakan Pinjaman"):
+            st.switch_page("pinjaman.py")
 
 
 if __name__ == "__main__":
