@@ -177,10 +177,10 @@ def main():
                 else:
                     st.error("Incorrect verification code")
 
-    elif st.session_state.page == 'mainapp':
+    elif st.session_state.page == 'homepage':
         # Execute the code from homepage.py
-        with open("pages/mainapp.py") as f:
-            code = compile(f.read(), "pages/mainapp.py", 'exec')
+        with open("pages/Homepage.py") as f:
+            code = compile(f.read(), "pages/Homepage.py", 'exec')
             exec(code, globals())
 
 if __name__ == "__main__":
