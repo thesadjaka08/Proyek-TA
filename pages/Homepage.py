@@ -12,9 +12,9 @@ def homepage():
 
     # sidebars
     st.sidebar.header("Menu")
-    # st.sidebar.page_link("https://chatloanbot.000webhostapp.com/", label="Chatbot")
-    # st.sidebar.page_link("pages/pinjaman.py", label="Prediksi Kelayakan Pinjaman")
-    # st.sidebar.page_link("pages/info.py", label="Info")
+    st.sidebar.page_link("https://chatloanbot.000webhostapp.com/", label="Chatbot")
+    st.sidebar.page_link("pages/pinjaman.py", label="Prediksi Kelayakan Pinjaman")
+    st.sidebar.page_link("pages/info.py", label="Info")
     st.sidebar.markdown("""
     <a href="Login.py" target="_self">
         <button style="background-color:#f63366;color:white;border:none;padding:10px 20px;border-radius:5px; margin-top:50px;">
