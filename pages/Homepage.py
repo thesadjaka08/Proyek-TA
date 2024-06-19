@@ -96,9 +96,9 @@ def homepage():
         #     st.switch_page("pages/pinjaman.py")
         
         st.markdown("""
-        <a href="Login.py" target="_self">
+        <a href="pages/pinjaman.py" target="_self">
             <button style="background-color:#f63366;color:white;border:none;padding:10px 20px;border-radius:5px; margin-top:50px;">
-                Logout
+                Prediksi Kelayakan Pinjaman
             </button>
         </a>
         """, unsafe_allow_html=True)
