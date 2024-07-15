@@ -39,7 +39,7 @@ Age = st.number_input("Masukkan Usia", min_value=17, max_value=100)
 
 Experience = st.number_input("Jumlah Tahun Pengalaman Kerja", min_value=1, max_value=100)
 
-Income = st.number_input("Jumlah Pendapatan", min_value=0, max_value=100000000)
+Income = st.number_input("Jumlah Pendapatan Tahunan", min_value=0, max_value=100000000)
 
 Family = st.number_input("Jumlah Keluarga", min_value=1, max_value=20)
 
