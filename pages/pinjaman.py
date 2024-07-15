@@ -37,18 +37,18 @@ if st.button("Info"):
 
 Age = st.number_input("Masukkan Usia", min_value=17, max_value=100)
 
-Experience = st.number_input("Jumlah Pengalaman", min_value=1, max_value=100)
+Experience = st.number_input("Jumlah Tahun Pengalaman Kerja", min_value=1, max_value=100)
 
-Income = st.number_input("Jumlah Pendapatan", min_value=0.0, max_value=20.0)
+Income = st.number_input("Jumlah Pendapatan", min_value=0, max_value=float('inf'))
 
-Family = st.selectbox("Jumlah Keluarga", options=[1, 2, 3, 4])
+Family = st.selectbox("Jumlah Keluarga", min_value=1, max_value=20)
 
-CCAvg = st.number_input("Jumlah CCAvg", min_value=0.0, max_value=10.0)
+CCAvg = st.number_input("Jumlah CCAvg", min_value=0, max_value=float('inf'))
 
 Education = st.selectbox("Pendidikan", options=[1, 2, 3])
 st.caption(":red[**1**]: Sarjana (Bachelor's degree) :red[**2**]: Magister (Master's degree) :red[**3**]: Profesional (Professional degree)")
 
-Mortgage = st.number_input("Jumlah Mortgage/Hipotek", min_value=0, max_value=650)
+Mortgage = st.number_input("Jumlah Mortgage/Hipotek", min_value=0, max_value=float('inf'))
 
 Securitiesaccount = st.selectbox("Apakah memiliki Securities Account", options=[0, 1])
 st.caption(":red[**0**] :  Tidak Ada;  :red[**1**] :  Ada")
