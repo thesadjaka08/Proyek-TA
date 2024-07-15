@@ -41,7 +41,7 @@ Experience = st.number_input("Jumlah Tahun Pengalaman Kerja", min_value=1, max_v
 
 Income = st.number_input("Jumlah Pendapatan", min_value=0, max_value=100000000)
 
-Family = st.selectbox("Jumlah Keluarga", min_value=1, max_value=20)
+Family = st.number_input("Jumlah Keluarga", min_value=1, max_value=20)
 
 CCAvg = st.number_input("Jumlah CCAvg", min_value=0, max_value=100000000)
 
