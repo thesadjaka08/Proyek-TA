@@ -61,8 +61,8 @@ input_data = pd.DataFrame({
     'Income': [Income],
     'CCAvg': [CCAvg],
     'Mortgage': [Mortgage],
-    'Securities_Account': [Securities_Account],
-    'CD_Account': [CD_Account],
+    'Securities Account': [Securities_Account],
+    'CD Account': [CD_Account],
     'Online': [Online],
     'CreditCard': [CreditCard]
 })
