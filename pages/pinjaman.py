@@ -86,4 +86,4 @@ if st.button("Prediksi"):
     if prediction[0] == 1:
         st.error(f"Nasabah di berikan pinjaman dengan prediksi {prediction_proba[0][1] * 100:.2f}%")
     else:
-        st.success(f"Nasabah tidak di berikan pinjaman dengan prediksi {prediction_proba[0][0] * 100:.2f}%")
+        st.success(f"Nasabah tidak di berikan pinjaman dengan prediksi {prediction_proba[0][0] * 100:.2f}%")
