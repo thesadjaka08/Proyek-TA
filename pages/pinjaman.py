@@ -26,7 +26,7 @@ st.sidebar.markdown("""
 """, unsafe_allow_html=True)
 
 # Load the trained model
-model = joblib.load('Xgboost_model.sav', 'rb')
+model = joblib.load('model_xgb.sav', 'rb')
 
 # Title of the app
 st.title("Prediksi Kelayakan Pinjaman")
@@ -35,48 +35,49 @@ st.title("Prediksi Kelayakan Pinjaman")
 if st.button("Info"):
     st.switch_page("pages/info.py")
 
-Age = st.number_input("Masukkan Usia", min_value=17, max_value=100)
+Age = st.number_input("Usia", min_value=18, max_value=100)
+
+Family = st.number_input("Jumlah Keluarga", min_value=1, max_value=50)
+
+Education = st.selectbox("Pendidikan Terakhir", options=[1, 2, 3])
+st.caption(":red[**1**]: Sarjana (Bachelor's degree) :red[**2**]: Magister (Master's degree) :red[**3**]: Profesional (Professional degree)")
 
 Experience = st.number_input("Jumlah Tahun Pengalaman Kerja", min_value=1, max_value=100)
 
-Income = st.number_input("Jumlah Pendapatan Tahunan", min_value=0, max_value=100000000)
+Income = st.number_input("Jumlah Pendapatan Bulanan", min_value=0, max_value=500000000)
 
-Family = st.number_input("Jumlah Keluarga", min_value=1, max_value=20)
+CCAvg = st.number_input("Jumlah Pengeluaran Bulanan", min_value=0, max_value=100000000)
 
-CCAvg = st.number_input("Jumlah CCAvg", min_value=0, max_value=100000000)
+Mortgage = st.number_input("Jumlah Hipotek", min_value=0, max_value=100000000)
+st.caption("Nilai barang yang dijadikan jaminan nasabah kepada bank)")
 
-Education = st.selectbox("Pendidikan", options=[1, 2, 3])
-st.caption(":red[**1**]: Sarjana (Bachelor's degree) :red[**2**]: Magister (Master's degree) :red[**3**]: Profesional (Professional degree)")
-
-Mortgage = st.number_input("Jumlah Mortgage/Hipotek", min_value=0, max_value=100000000)
-
-Securitiesaccount = st.selectbox("Apakah memiliki Securities Account", options=[0, 1])
+Securitiesaccount = st.selectbox("Apakah memiliki Rekening Investasi?", options=[0, 1])
 st.caption(":red[**0**] :  Tidak Ada;  :red[**1**] :  Ada")
 
-
-CDaccount = st.selectbox("Apakah memiliki CD Account", options=[0, 1])
+CDaccount = st.selectbox("Apakah memiliki Rekening CD (Sertifikat Deposito)?", options=[0, 1])
 st.caption(":red[**0**] :  Tidak Ada;  :red[**1**] :  Ada")
 
-Online = st.selectbox("Apakah Online", options=[0, 1])
+Online = st.selectbox("Apakah menggunakan layanan Mobile Banking?", options=[0, 1])
 st.caption(":red[**0**] :  Tidak Ada;  :red[**1**] :  Ada")
 
-CreditCard = st.selectbox("Apakah memiliki CreditCard", options=[0, 1])
+CreditCard = st.selectbox("Apakah memiliki kartu kredit?", options=[0, 1])
 st.caption(":red[**0**] :  Tidak Ada;  :red[**1**] :  Ada")
 
 # Create a DataFrame from user input
-input_data = pd.DataFrame({
-    'Age': [Age],
-    'Experience': [Experience],
-    'Income': [Income],
-    'Family': [Family],
-    'CCAvg': [CCAvg],
-    'Education': [Education],
-    'Mortgage': [Mortgage],
-    'Securitiesaccount': [Securitiesaccount],
-    'CDaccount': [CDaccount],
-    'Online': [Online],
-    'CreditCard': [CreditCard]
-})
+education_dict = {"Sarjana": [1, 0], "Pascasarjana": [0, 1], "Professional": [0, 0]}
+input_data = np.array([
+    age, 
+    experience, 
+    income, 
+    family, 
+    ccavg, 
+    mortgage, 
+    securities_account, 
+    cd_account, 
+    online, 
+    credit_card, 
+    *education_dict[education]
+]).reshape(1, -1)
 
 # Make prediction
 if st.button("Prediksi"):
@@ -84,6 +85,6 @@ if st.button("Prediksi"):
     prediction_proba = model.predict_proba(input_data)
 
     if prediction[0] == 1:
-        st.error(f"Nasabah di berikan pinjaman dengan prediksi {prediction_proba[0][1] * 100:.2f}%")
+        st.error(f"Nasabah diberikan pinjaman dengan prediksi {prediction_proba[0][1] * 100:.2f}%")
     else:
-        st.success(f"Nasabah tidak di berikan pinjaman dengan prediksi {prediction_proba[0][0] * 100:.2f}%")
+        st.success(f"Nasabah tidak diberikan pinjaman dengan prediksi {prediction_proba[0][0] * 100:.2f}%")
