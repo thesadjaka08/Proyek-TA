@@ -52,7 +52,7 @@ st.caption(":red[**0**] :  Tidak Ada;  :red[**1**] :  Ada")
 Online = st.selectbox("Apakah menggunakan layanan Mobile Banking?", options=[0, 1])
 st.caption(":red[**0**] :  Tidak Ada;  :red[**1**] :  Ada")
 
-CreditCard = st.selectbox("Apakah memiliki kartu kredit?", options=[0, 1])
+CreditCard = st.selectbox("Apakah memiliki Kartu Kredit?", options=[0, 1])
 st.caption(":red[**0**] :  Tidak Ada;  :red[**1**] :  Ada")
 
 Income = st.number_input("Jumlah Pendapatan Bulanan (dalam Rupiah)", min_value=0, max_value=500000000)
