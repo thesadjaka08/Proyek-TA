@@ -64,7 +64,7 @@ CreditCard = st.selectbox("Apakah memiliki kartu kredit?", options=[0, 1])
 st.caption(":red[**0**] :  Tidak Ada;  :red[**1**] :  Ada")
 
 # Preprocessing input pengguna
-education_dict = {"Sarjana": [1, 0], "Pascasarjana": [0, 1], "Professional": [0, 0]}
+education_dict = {"Sarjana": [1, 0], "Pascasarjana": [2, 0], "Professional": [3, 0]}
 education_values = education_dict[Education]
 
 # Menggabungkan semua input ke dalam array
