@@ -49,7 +49,7 @@ Income = st.number_input("Jumlah Pendapatan Bulanan", min_value=0, max_value=500
 CCAvg = st.number_input("Jumlah Pengeluaran Bulanan", min_value=0, max_value=100000000)
 
 Mortgage = st.number_input("Jumlah Hipotek", min_value=0, max_value=100000000)
-st.caption("Nilai barang yang dijadikan jaminan nasabah kepada bank)")
+st.caption("Nilai barang yang dijadikan jaminan nasabah kepada bank")
 
 Securitiesaccount = st.selectbox("Apakah memiliki Rekening Investasi?", options=[0, 1])
 st.caption(":red[**0**] :  Tidak Ada;  :red[**1**] :  Ada")
@@ -63,8 +63,11 @@ st.caption(":red[**0**] :  Tidak Ada;  :red[**1**] :  Ada")
 CreditCard = st.selectbox("Apakah memiliki kartu kredit?", options=[0, 1])
 st.caption(":red[**0**] :  Tidak Ada;  :red[**1**] :  Ada")
 
-# Create a DataFrame from user input
+# Preprocessing input pengguna
 education_dict = {"Sarjana": [1, 0], "Pascasarjana": [0, 1], "Professional": [0, 0]}
+education_values = education_dict[education]
+
+# Menggabungkan semua input ke dalam array
 input_data = np.array([
     age, 
     experience, 
@@ -76,10 +79,10 @@ input_data = np.array([
     cd_account, 
     online, 
     credit_card, 
-    *education_dict[education]
+    *education_values
 ]).reshape(1, -1)
 
-# Make prediction
+# Membuat prediksi
 if st.button("Prediksi"):
     prediction = model.predict(input_data)
     prediction_proba = model.predict_proba(input_data)
