@@ -39,7 +39,7 @@ Age = st.number_input("Usia", min_value=18, max_value=100)
 
 Family = st.number_input("Jumlah Keluarga", min_value=1, max_value=50)
 
-Education = st.selectbox("Pendidikan Terakhir", options=["Sarjana", "Pascasarjana", "Professional"])
+Education = st.selectbox("Pendidikan Terakhir", options=["Sarjana", "Magister", "Profesional"])
 st.caption(":red[**1**]: Sarjana (Bachelor's degree) :red[**2**]: Magister (Master's degree) :red[**3**]: Profesional (Professional degree)")
 
 Experience = st.number_input("Jumlah Tahun Pengalaman Kerja", min_value=1, max_value=100)
@@ -51,20 +51,20 @@ CCAvg = st.number_input("Jumlah Pengeluaran Bulanan (dalam Rupiah)", min_value=0
 Mortgage = st.number_input("Jumlah Hipotek (dalam Rupiah)", min_value=0, max_value=100000000)
 st.caption("Nilai barang yang dijadikan jaminan nasabah kepada bank")
 
-Securities_account = st.selectbox("Apakah memiliki Rekening Investasi?", options=[0, 1])
+Securities Account = st.selectbox("Apakah memiliki Rekening Investasi?", options=[0, 1])
 st.caption(":red[**0**] :  Tidak Ada;  :red[**1**] :  Ada")
 
-CD_account = st.selectbox("Apakah memiliki Rekening CD (Sertifikat Deposito)?", options=[0, 1])
+CD Account = st.selectbox("Apakah memiliki Rekening CD (Sertifikat Deposito)?", options=[0, 1])
 st.caption(":red[**0**] :  Tidak Ada;  :red[**1**] :  Ada")
 
 Online = st.selectbox("Apakah menggunakan layanan Mobile Banking?", options=[0, 1])
 st.caption(":red[**0**] :  Tidak Ada;  :red[**1**] :  Ada")
 
-Credit_card = st.selectbox("Apakah memiliki kartu kredit?", options=[0, 1])
+CreditCard = st.selectbox("Apakah memiliki kartu kredit?", options=[0, 1])
 st.caption(":red[**0**] :  Tidak Ada;  :red[**1**] :  Ada")
 
 # Preprocessing input pengguna
-education_dict = {"Sarjana": [1, 0], "Pascasarjana": [0, 1], "Professional": [0, 0]}
+education_dict = {"Sarjana": [1, 0], "Magister": [0, 1], "Profesional": [0, 0]}
 education_values = education_dict[Education]
 
 # Menggabungkan semua input ke dalam array
@@ -75,10 +75,10 @@ input_data = np.array([
     Family, 
     CCAvg, 
     Mortgage, 
-    Securities_account, 
-    CD_account, 
+    Securities Account, 
+    CD Account, 
     Online, 
-    Credit_card, 
+    CreditCard, 
     *education_values
 ]).reshape(1, -1)
 
