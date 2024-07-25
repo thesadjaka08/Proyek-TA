@@ -87,8 +87,8 @@ if st.button("Prediksi"):
         prediction_proba = model.predict_proba(input_data)
 
         if prediction[0] == 1:
-            st.success(f"Nasabah layak diberikan pinjaman dengan prediksi {prediction_proba[0][1] * 100:.2f}%")
+            st.error(f"Nasabah layak diberikan pinjaman dengan prediksi {prediction_proba[0][1] * 100:.2f}%")
         else:
-            st.error(f"Nasabah belum layak diberikan pinjaman dengan prediksi {prediction_proba[0][0] * 100:.2f}%")
+            st.success(f"Nasabah belum layak diberikan pinjaman dengan prediksi {prediction_proba[0][0] * 100:.2f}%")
     except ValueError as e:
         st.error(f"Terjadi kesalahan pada input data: {e}")
