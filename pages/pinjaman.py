@@ -51,20 +51,20 @@ CCAvg = st.number_input("Jumlah Pengeluaran Bulanan (dalam Rupiah)", min_value=0
 Mortgage = st.number_input("Jumlah Hipotek (dalam Rupiah)", min_value=0, max_value=100000000)
 st.caption("Nilai barang yang dijadikan jaminan nasabah kepada bank")
 
-Securitiesaccount = st.selectbox("Apakah memiliki Rekening Investasi?", options=[0, 1])
+Securities_account = st.selectbox("Apakah memiliki Rekening Investasi?", options=[0, 1])
 st.caption(":red[**0**] :  Tidak Ada;  :red[**1**] :  Ada")
 
-CDaccount = st.selectbox("Apakah memiliki Rekening CD (Sertifikat Deposito)?", options=[0, 1])
+CD_account = st.selectbox("Apakah memiliki Rekening CD (Sertifikat Deposito)?", options=[0, 1])
 st.caption(":red[**0**] :  Tidak Ada;  :red[**1**] :  Ada")
 
 Online = st.selectbox("Apakah menggunakan layanan Mobile Banking?", options=[0, 1])
 st.caption(":red[**0**] :  Tidak Ada;  :red[**1**] :  Ada")
 
-CreditCard = st.selectbox("Apakah memiliki kartu kredit?", options=[0, 1])
+Credit_card = st.selectbox("Apakah memiliki kartu kredit?", options=[0, 1])
 st.caption(":red[**0**] :  Tidak Ada;  :red[**1**] :  Ada")
 
 # Preprocessing input pengguna
-education_dict = {"Sarjana": [1, 0], "Pascasarjana": [2, 0], "Professional": [3, 0]}
+education_dict = {"Sarjana": [1, 0], "Pascasarjana": [0, 1], "Professional": [0, 0]}
 education_values = education_dict[Education]
 
 # Menggabungkan semua input ke dalam array
