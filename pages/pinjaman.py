@@ -43,9 +43,9 @@ Income = st.number_input("Jumlah Pendapatan Bulanan (dalam Rupiah)", min_value=0
 CCAvg = st.number_input("Jumlah Pengeluaran Bulanan (dalam Rupiah)", min_value=0, max_value=100000000)
 Mortgage = st.number_input("Jumlah Hipotek (dalam Rupiah)", min_value=0, max_value=100000000)
 st.caption("Nilai barang yang dijadikan jaminan nasabah kepada bank")
-Securities_Account = st.selectbox("Apakah memiliki Rekening Investasi?", options=[0, 1])
+Securities Account = st.selectbox("Apakah memiliki Rekening Investasi?", options=[0, 1])
 st.caption(":red[**0**] :  Tidak Ada;  :red[**1**] :  Ada")
-CD_Account = st.selectbox("Apakah memiliki Rekening CD (Sertifikat Deposito)?", options=[0, 1])
+CD Account = st.selectbox("Apakah memiliki Rekening CD (Sertifikat Deposito)?", options=[0, 1])
 st.caption(":red[**0**] :  Tidak Ada;  :red[**1**] :  Ada")
 Online = st.selectbox("Apakah menggunakan layanan Mobile Banking?", options=[0, 1])
 st.caption(":red[**0**] :  Tidak Ada;  :red[**1**] :  Ada")
@@ -61,8 +61,8 @@ input_data = pd.DataFrame({
     'Income': [Income],
     'CCAvg': [CCAvg],
     'Mortgage': [Mortgage],
-    'Securities_Account': [Securities_Account],
-    'CD_Account': [CD_Account],
+    'Securities Account': [Securities Account],
+    'CD Account': [CD Account],
     'Online': [Online],
     'CreditCard': [CreditCard]
 })
