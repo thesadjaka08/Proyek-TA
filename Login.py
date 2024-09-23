@@ -56,8 +56,8 @@ def send_verification_code(email):
     
     smtp_server = "smtp.gmail.com"
     smtp_port = 587
-    smtp_user = "111202113845.mhs.dinus.ac.id"
-    smtp_password = "qafpgdzqqzpohbsu"  # Use your app password here
+    smtp_user = "thesajaka@gmail.com"
+    smtp_password = "avhnyrfrbhgsmdoq"  # Use your app password here
     
     try:
         server = smtplib.SMTP(smtp_server, smtp_port)
