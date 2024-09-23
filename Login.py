@@ -56,7 +56,7 @@ def send_verification_code(email):
     
     smtp_server = "smtp.gmail.com"
     smtp_port = 587
-    smtp_user = "jeremiaexcel12@gmail.com"
+    smtp_user = "111202113845.mhs.dinus.ac.id"
     smtp_password = "lgyjyhyxfphmgvyh"  # Use your app password here
     
     try:
