@@ -14,7 +14,6 @@ st.markdown(no_sidebar_style, unsafe_allow_html=True)
 # sidebars
 st.sidebar.header("Menu")
 st.sidebar.page_link("pages/Homepage.py", label="Beranda")
-st.sidebar.page_link("https://chatloanbot.000webhostapp.com/", label="Chatbot")
 st.sidebar.page_link("pages/info.py", label="Info")
 st.sidebar.markdown("""
 <a href="Login.py" target="_self">
