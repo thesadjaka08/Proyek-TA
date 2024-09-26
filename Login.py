@@ -127,7 +127,7 @@ def main():
 
     if st.session_state.page == 'login':
         st.title("Login and Registration")
-        st.sidebar.image('images/logo.png')
+        st.sidebar.image('images/logo.jpg')
         
         tabs = st.tabs(["Login", "Register"])
         
