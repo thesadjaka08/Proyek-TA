@@ -161,7 +161,7 @@ def main():
                     st.session_state.new_username = new_username
                     st.session_state.new_password = new_password
                     st.session_state.email = email
-                    st.session_state.verification_code = '1234'  # Simulating sending a code
+                    st.session_state.verification_code = 'Masukkan kode di sini!'  # Simulating sending a code
 
         if "verification_code" in st.session_state:
             input_code = st.text_input("Enter verification code sent to your email", key="verification_code")
