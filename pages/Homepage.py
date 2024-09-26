@@ -5,7 +5,7 @@ def homepage():
     st.title("")
     st.markdown("<style> ul {display: none;} </style>", unsafe_allow_html=True)  
 
-    st.sidebar.image('images/logo.png')
+    st.sidebar.image('images/logo.jpg')
 
         # Set the title of the homepage
     st.markdown('<div style="text-align:center; font-size:46px; font-weight:bold; margin-bottom:25px;">Selamat datang di Sistem Prediksi Kelayakan Pinjaman kami!</div>', unsafe_allow_html=True)
