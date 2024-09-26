@@ -12,7 +12,6 @@ def homepage():
 
     # sidebars
     st.sidebar.header("Menu")
-    st.sidebar.page_link("https://chatloanbot.000webhostapp.com/", label="Chatbot")
     st.sidebar.page_link("pages/pinjaman.py", label="Prediksi Kelayakan Pinjaman")
     st.sidebar.page_link("pages/info.py", label="Info")
     st.sidebar.markdown("""
@@ -41,18 +40,13 @@ def homepage():
 
 
     # Create columns
-    col1, col2, col3 = st.columns([1, 1, 1])
+    col1, col2 = st.columns([1, 1])
     with col1:
-        st.image('images/chatbotinformasi.png', use_column_width=True)
-        st.markdown('<div style="text-align:center; font-size:20px; font-weight:bold; margin-bottom:25px; margin-top:25px;">Chatbot Informasi</div>', unsafe_allow_html=True)
-        st.markdown('<div style="text-align:center">Chatbot yang mampu menjawab pertanyaan umum terkait proses pengajuan pinjaman, interpretasi hasil prediksi, dan prosedur lain yang relevan.</div>', unsafe_allow_html=True)
-
-    with col2:
         st.image('images/predictive.png', use_column_width=True)
         st.markdown('<div style="text-align:center; font-size:20px; font-weight:bold; margin-bottom:18px;">Prediksi Kelayakan Pinjaman</div>', unsafe_allow_html=True)
         st.markdown('<div style="text-align:center">Sistem menganalisis data yang dimasukkan menggunakan model machine learning yang telah dilatih sebelumnya untuk memprediksi kelayakan pinjaman.</div>', unsafe_allow_html=True)
 
-    with col3:
+    with col2:
         st.image('images/analytics.png', use_column_width=True)
         st.markdown('<div style="text-align:center; font-size:20px; font-weight:bold; margin-bottom:25px; margin-top:25px;">Pelaporan dan Analisis</div>', unsafe_allow_html=True)
         st.markdown('<div style="text-align:center">Menghasilkan laporan periodik dan analisis mendalam mengenai tren pengajuan pinjaman dan kinerja model prediksi.</div>', unsafe_allow_html=True)
