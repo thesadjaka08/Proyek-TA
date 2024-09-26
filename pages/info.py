@@ -7,7 +7,6 @@ st.sidebar.header("Menu")
 
 st.sidebar.page_link("pages/Homepage.py", label="Beranda")
 st.sidebar.page_link("pages/pinjaman.py", label="Prediksi Kelayakan Pinjaman")
-st.sidebar.page_link("https://chatloanbot.000webhostapp.com/", label="Chatbot")
 
 st.sidebar.markdown("""
 <a href="Login.py" target="_self">
