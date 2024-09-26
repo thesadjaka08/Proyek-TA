@@ -67,8 +67,7 @@ def homepage():
     with col2:
         st.markdown('''
         <div style="display: flex; align-items: center; margin-bottom: 10px; margin-top: 5px; margin-left: 10px;">
-            <span style="font-size: 25px; margin-right: 10px;">📈</span>
-            <div>Prediksi Kelayakan Pinjaman menampilkan hasil prediksi apakah pemohon layak mendapatkan pinjaman atau tidak</div>
+            <div>Prediksi kelayakan pinjaman menampilkan hasil prediksi apakah pemohon layak mendapatkan pinjaman atau tidak</div>
         </div>
         ''', unsafe_allow_html=True)
         
