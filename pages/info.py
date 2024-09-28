@@ -20,21 +20,19 @@ st.sidebar.markdown("""
 
 def show_loan_attributes_description():
     description = """
-    ### Deskripsi Pertanyaan Terkait Pinjaman Pribadi
+    ### Deskripsi Pertanyaan pada Fitur Prediksi Kelayakan Pinjaman 
 
-    1. **Usia**: Usia pelanggan dalam tahun.
-    2. **Pengalaman**: Jumlah tahun pengalaman kerja pelanggan.
-    3. **Pendapatan**: Pendapatan tahunan pelanggan dalam bentuk mata uang.
-    4. **Kode Pos**: Kode pos lokasi tempat tinggal pelanggan.
-    5. **Keluarga**: Jumlah orang dalam keluarga pelanggan (termasuk pelanggan itu sendiri).
-    6. **CCAvg**: Rata-rata pengeluaran kartu kredit bulanan pelanggan dalam bentuk mata uang.
-    7. **Pendidikan**: Tingkat pendidikan pelanggan, yang dapat berupa :red[**1**]: Sarjana (Bachelor's degree) :red[**2**]: Magister (Master's degree) :red[**3**]: Profesional (Professional degree)
-    8. **Hipotek**: Nilai hipotek yang dimiliki nasabah dalam bentuk mata uang.
-    9. **Rekening Surat Berharga**: Status apakah nasabah memiliki rekening surat berharga atau tidak (rekening investasi).
-    10. **Rekening CD**: Status apakah nasabah memiliki rekening CD atau tidak.
-    11. **Online**: Status apakah nasabah menggunakan layanan online bank atau tidak.
-    12. **Kartu Kredit**: Status apakah nasabah menggunakan kartu kredit bank atau tidak.
-    13. **Pinjaman Pribadi**: Status apakah nasabah diberikan pinjaman pribadi atau tidak.
+    1. **Usia**: Usia nasabah.
+    2. **Pengalaman**: Jumlah tahun pengalaman kerja nasabah.
+    3. **Pendapatan**: Rata-rata pendapatan bulanan nasabah dalam bentuk mata uang rupiah.
+    4. **Keluarga**: Jumlah orang dalam keluarga yang menjadi tanggungan nasabah (termasuk nasabah itu sendiri).
+    5. **CCAvg**: Rata-rata pengeluaran bulanan nasabah dalam bentuk mata uang rupiah.
+    6. **Pendidikan**: Tingkat pendidikan terakhir nasabah, dapat berupa :red[**1**]: Sarjana (Bachelor's degree) :red[**2**]: Magister (Master's degree) :red[**3**]: Profesional (Professional degree)
+    7. **Hipotek**: Nilai hipotek yang dimiliki nasabah dalam bentuk mata uang rupiah. Nilai Hipotek adalah jumlah pinjaman dari bank dengan jaminan properti.
+    8. **Rekening Investasi**: Status apakah nasabah memiliki rekening investasi atau tidak. Rekening investasi adalah rekening yang menyimpan saham, obligasi, dana, dan surat berharga lainnya, serta uang tunai.
+    9. **Rekening CD**: Status apakah nasabah memiliki rekening CD atau tidak. Sertifikat deposito (CD) adalah jenis rekening tabungan yang memberikan suku bunga tetap atas uang yang disimpan selama jangka waktu yang disepakati.
+    10. **Layanan Mobile Banking**: Status apakah nasabah menggunakan layanan online bank atau tidak.
+    11. **Kartu Kredit**: Status apakah nasabah menggunakan kartu kredit bank atau tidak.
 
     :tulip: :red[**Note Kode :**] 
 
