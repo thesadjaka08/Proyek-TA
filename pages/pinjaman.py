@@ -37,7 +37,7 @@ Age = st.number_input("Usia", min_value=18, max_value=100)
 
 Experience = st.number_input("Jumlah Tahun Pengalaman Kerja", min_value=1, max_value=100)
 
-Family = st.number_input("Jumlah Keluarga", min_value=1, max_value=50)
+Family = st.number_input("Jumlah Tanggungan Keluarga (termasuk nasabah sendiri)", min_value=1, max_value=50)
 
 Education = st.selectbox("Pendidikan Terakhir", options=["1", "2", "3"])
 st.caption(":red[**1**]: Sarjana (Bachelor's degree) :red[**2**]: Magister (Master's degree) :red[**3**]: Profesional (Professional degree)")
